@@ -1,0 +1,10 @@
+name: ExplosionPlugin
+version: '${project.version}'
+main: me.axl.explosionplugin.explosionplugin.ExplosionPlugin
+api-version: 1.18
+authors: [ Axl ]
+description: A plugin that spawns TNTs around a selected player.
+commands:
+  givetnt:
+    description: Get 20 TNT.
+    usage: /<command>
