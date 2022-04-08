@@ -11,6 +11,7 @@ public final class ExplosionPlugin extends JavaPlugin {
         // Plugin startup logic
         System.out.println("Explosion Plugin has initialized.");
         getCommand("givetnt").setExecutor(new GiveTNT());
+        getCommand("explode").setExecutor(new Explode());
 
 
     }

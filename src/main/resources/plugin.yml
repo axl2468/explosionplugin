@@ -6,5 +6,8 @@ authors: [ Axl ]
 description: A plugin that spawns TNTs around a selected player.
 commands:
   givetnt:
-    description: Get 20 TNT.
-    usage: /<command>
+    description: Gives 20 TNT to a selected player. If no player is specified, TNTs are given to the command-issuer.
+    usage: /<command> [player]
+  explode:
+    description: Spawns primed TNTs around a selected player. If no player is specified, TNTs are spawned around the command issuer.
+    usage: /<command> [player]

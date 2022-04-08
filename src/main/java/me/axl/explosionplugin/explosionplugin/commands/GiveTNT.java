@@ -15,16 +15,24 @@ public class GiveTNT implements CommandExecutor {
         if (sender instanceof Player) {
             Player player = (Player) sender;
 
-            if(player.hasPermission("explosionplugin.givetnt")) {
+            if (player.hasPermission("explosionplugin.givetnt")) {
                 ItemStack tnt = new ItemStack(Material.TNT, 20);
+                Player receiver = (Player) sender;
 
-                player.getInventory().addItem(tnt);
+                if (args.length > 0) {
+                    receiver = (Player) sender;
+                }
+
+                receiver.getInventory().addItem(tnt);
                 player.sendMessage(ChatColor.RED + "20 TNT blocks given.");
-            }
-            else {
+
+            } else {
                 player.sendMessage(ChatColor.RED + "Error: You do not have permission to use that command.");
             }
 
+        }
+        else {
+            System.out.println("You need to be a player to execute this command.");
         }
 
         return true;
